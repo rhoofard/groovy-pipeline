@@ -26,16 +26,15 @@ jobs:
         run: |
           curl -O https://dlcdn.apache.org/groovy/4.0.21/distribution/apache-groovy-binary-4.0.21.zip
           unzip apache-groovy-binary-4.0.21.zip
-          ls
-      #     mv groovy-4.0.2 /tmp/groovy/
-      #     ln -s /usr/share/groovy/groovy-4.0.2 current
+          mv groovy-4.0.21 /tmp/groovy/
+          ln -s /usr/share/groovy/groovy-4.0.21 current
           
-      # - name: set groovy home
-      #   run: |
-      #     export GROOVY_HOME=/tmp/groovy/current
-      #     export PATH=$GROOVY_HOME/bin:$PATH
+      - name: set groovy home
+        run: |
+          export GROOVY_HOME=/tmp/groovy/current
+          export PATH=$GROOVY_HOME/bin:$PATH
 
-      #     groovy -version
+          groovy -version
 
         
       # - name: bootstrap and build
