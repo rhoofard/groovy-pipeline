@@ -54,6 +54,6 @@ jobs:
           
       - name: look for dist
         run: |
-          ls groovy/src/
+          ls groovy/src/bin/
 
   
