@@ -1,4 +1,4 @@
-name: Groovy Scripts
+name: Groovy binary install
 
 on:
   push:
@@ -27,8 +27,8 @@ jobs:
       - name: download groovy src
         run: |
           wget https://groovy.jfrog.io/ui/native/dist-release-local/groovy-zips/apache-groovy-binary-4.0.21.zip
-          unzip apache-groovy-binary-4.0.21.zip
           ls
+          unzip apache-groovy-binary-4.0.21.zip
         
       # - name: bootstrap and build
       #   if: steps.restore-cache.outputs.cache-hit != 'true'
