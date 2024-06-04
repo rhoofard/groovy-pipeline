@@ -32,7 +32,8 @@ jobs:
           ls groovy-4.0.21/bin/
           chmod +x groovy-4.0.21/bin/groovysh
           ./groovy-4.0.21/bin/groovysh
-          :load script.groovy
+          println "Hello World!"
+          ./groovy-4.0.21/bin/groovy println "Hello World!"
 
 
         
