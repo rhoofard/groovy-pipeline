@@ -25,6 +25,9 @@ jobs:
       - name: download groovy src
         run: |
           curl -O https://dlcdn.apache.org/groovy/4.0.21/distribution/apache-groovy-binary-4.0.21.zip
+          ls
+          tar -zxvf groovy-4.0.21.tar.gz
+
 
         
       # - name: bootstrap and build
