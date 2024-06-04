@@ -33,6 +33,7 @@ jobs:
           key: groovy
 
       - name: download groovy src
+        if: steps.restore-cache.outputs.cache-hit != 'true'
         run: |
           git clone https://gitbox.apache.org/repos/asf/groovy.git
         
