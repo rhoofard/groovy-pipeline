@@ -27,9 +27,11 @@ jobs:
       - name: download groovy src
         run: |
           git clone https://gitbox.apache.org/repos/asf/groovy.git
-          cd groovy
-
-      - name: build
+          
+      - name: bootstrap and build
         run: |
-          ls
-          gradle clean dist
+          cd groovy
+          gradle -p bootstrap
+          gradlew clean dist
+
+  
