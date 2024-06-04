@@ -32,6 +32,6 @@ jobs:
         run: |
           cd groovy
           gradle -p bootstrap
-          gradlew clean dist
+          ./gradlew clean dist
 
   
