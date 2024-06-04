@@ -26,7 +26,6 @@ jobs:
         run: |
           curl -O https://dlcdn.apache.org/groovy/4.0.21/distribution/apache-groovy-binary-4.0.21.zip
           unzip apache-groovy-binary-4.0.21.zip
-          mkdir /tmp
           mv groovy-4.0.2 /tmp/groovy/
           ln -s /usr/share/groovy/groovy-4.0.2 current
           
