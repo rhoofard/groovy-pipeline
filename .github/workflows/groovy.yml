@@ -34,4 +34,9 @@ jobs:
           gradle -p bootstrap
           ./gradlew clean dist
 
+      - name: look for dist
+        run: |
+          ls
+          ls dist/
+
   
