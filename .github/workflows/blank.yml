@@ -32,4 +32,4 @@ jobs:
       - name: build
         run: |
           ls
-          gradlew clean dist
+          gradle clean dist
