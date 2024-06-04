@@ -36,7 +36,7 @@ jobs:
           git clone https://gitbox.apache.org/repos/asf/groovy.git
         
       - name: bootstrap and build
-        if: steps.restore=cache.outputs.cache-hit != 'true'
+        if: steps.restore-cache.outputs.cache-hit != 'true'
         run: |
           cd groovy
           gradle -p bootstrap
@@ -48,7 +48,7 @@ jobs:
         with:
           path: |
             groovy/
-          key: ${{ steps.cache-primes-restore.outputs.cache-primary-key }}
+          key: ${{ steps.restore-cache.outputs.cache-primary-key }}
           
       - name: look for dist
         run: |
