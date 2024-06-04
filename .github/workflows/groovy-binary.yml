@@ -30,9 +30,7 @@ jobs:
           curl -O https://dlcdn.apache.org/groovy/4.0.21/distribution/apache-groovy-binary-4.0.21.zip
           unzip apache-groovy-binary-4.0.21.zip
           ls groovy-4.0.21/bin/
-          chmod +x groovy-4.0.21/bin/groovysh
-          ./groovy-4.0.21/bin/groovysh
-          println "Hello World!"
+          chmod +x groovy-4.0.21/bin/groovy
           ./groovy-4.0.21/bin/groovy println "Hello World!"
 
 
