@@ -27,8 +27,9 @@ jobs:
           curl -O https://dlcdn.apache.org/groovy/4.0.21/distribution/apache-groovy-binary-4.0.21.zip
           unzip apache-groovy-binary-4.0.21.zip
           mv groovy-4.0.21 /tmp/groovy/
-          chmod +x /tmp/groovy/groovy-4.0.21/src/bin/groovysh
-          ./tmp/groovy/groovy-4.0.21/src/bin/groovysh
+          ls /tmp/groovy/groovy-4.0.21/
+          # chmod +x /tmp/groovy/groovy-4.0.21/src/bin/groovysh
+          # ./tmp/groovy/groovy-4.0.21/src/bin/groovysh
 
         
       # - name: bootstrap and build
