@@ -33,7 +33,9 @@ jobs:
         run: |
           export GROOVY_HOME=/tmp/groovy/current
           export PATH=$GROOVY_HOME/bin:$PATH
-
+          
+      - name: run groovy
+        run: |
           groovy -version
 
         
