@@ -23,17 +23,33 @@ jobs:
 
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v3
+      - name: Restore cache
+        id: restore-cache
+        uses: actions/cache/restore@v4
+        with:
+          path: |
+            groovy/
+          key: groovy
 
       - name: download groovy src
         run: |
           git clone https://gitbox.apache.org/repos/asf/groovy.git
-          
+        
       - name: bootstrap and build
+        if: steps.restore=cache.outputs.cache-hit != 'true'
         run: |
           cd groovy
           gradle -p bootstrap
           ./gradlew clean dist
 
+      - name: Save Primes
+        id: save-cache
+        uses: actions/cache/save@v4
+        with:
+          path: |
+            groovy/
+          key: ${{ steps.cache-primes-restore.outputs.cache-primary-key }}
+          
       - name: look for dist
         run: |
           ls
