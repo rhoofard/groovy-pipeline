@@ -32,6 +32,8 @@ jobs:
           ls groovy-4.0.21/bin/
           chmod +x groovy-4.0.21/bin/groovysh
           ./groovy-4.0.21/bin/groovysh
+          :load script.groovy
+
 
         
       # - name: bootstrap and build
