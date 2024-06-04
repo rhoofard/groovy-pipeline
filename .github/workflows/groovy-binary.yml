@@ -31,7 +31,7 @@ jobs:
           unzip apache-groovy-binary-4.0.21.zip
           ls groovy-4.0.21/bin/
           chmod +x groovy-4.0.21/bin/groovy
-          ./groovy-4.0.21/bin/groovy println "Hello World!"
+          ./groovy-4.0.21/bin/groovy
 
 
         
