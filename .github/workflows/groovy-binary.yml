@@ -26,7 +26,7 @@ jobs:
         run: |
           curl -O https://dlcdn.apache.org/groovy/4.0.21/distribution/apache-groovy-binary-4.0.21.zip
           ls
-          tar -zxvf groovy-4.0.21.tar.gz
+          tar -zxvf apache-groovy-binary-4.0.21.zip
 
 
         
