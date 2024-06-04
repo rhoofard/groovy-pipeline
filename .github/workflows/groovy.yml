@@ -23,14 +23,6 @@ jobs:
 
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v3
-        
-      - name: Restore cache
-        id: restore-cache
-        uses: actions/cache/restore@v4
-        with:
-          path: |
-            groovy/
-          key: groovy
 
       - name: download groovy src
         if: steps.restore-cache.outputs.cache-hit != 'true'
@@ -43,18 +35,8 @@ jobs:
           cd groovy
           gradle -p bootstrap
           ./gradlew clean dist
-
-      - name: Save Cache
-        id: save-cache
-        uses: actions/cache/save@v4
-        with:
-          path: |
-            groovy/
-          key: ${{ steps.restore-cache.outputs.cache-primary-key }}
-          
-      - name: look for dist
-        run: |
           chmod +x groovy/src/bin/groovysh
           ./groovy/src/bin/groovysh
+
 
   
