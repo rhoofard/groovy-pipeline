@@ -23,6 +23,7 @@ jobs:
 
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v3
+        
       - name: Restore cache
         id: restore-cache
         uses: actions/cache/restore@v4
@@ -42,7 +43,7 @@ jobs:
           gradle -p bootstrap
           ./gradlew clean dist
 
-      - name: Save Primes
+      - name: Save Cache
         id: save-cache
         uses: actions/cache/save@v4
         with:
@@ -52,7 +53,6 @@ jobs:
           
       - name: look for dist
         run: |
-          ls
-          ls dist/
+          ls groovy/
 
   
